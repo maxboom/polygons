@@ -7,10 +7,16 @@ git clone git@github.com:maxboom/polygons.git .
 ```bash
 docker-compose up -d
 ```
-- **Install laravel & run migrations**
+- **Install laravel**
 ```bash
 make install
 ```
+- **Run migrations**
+```bash
+make migrate
+```
+_Note: wait until mysql container starting_
+
 
 ## Starting background jobs
 - **Adding a job worker**

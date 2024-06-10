@@ -106,9 +106,6 @@ class DataService implements
 
     private function persistSinglePolygon(RefreshJob $refreshJob, Region $region, array $points): void
     {
-        Log::debug( 'Region:' . $region->getName());
-        Log::debug( 'Polygon:' . json_encode($points));
-
         $polygonWKT = 'POLYGON((' . implode(',', array_map(function ($point) {
                 return implode(' ', $point);
             }, $points)) . '))';
